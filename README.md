@@ -29,14 +29,14 @@ Welcome to **Vid.AI**, an end-to-end video generator that creates educational vi
 
 1. Clone the repo  
    ```bash
-   git clone https://github.com/yourusername/Vid.AI.git
+   git clone https://github.com/mugdh04/Vid.AI.git
    cd Vid.AI
    ```
 
 2. Create & activate a virtualenv  
    ```bash
    python -m venv venv
-   source venv/Scripts/activate    # Windows
+   venv\Scripts\activate           # Windows
    source venv/bin/activate        # macOS/Linux
    ```
 
@@ -57,7 +57,7 @@ Welcome to **Vid.AI**, an end-to-end video generator that creates educational vi
 
 Run the CLI with your topic of choice:
 ```bash
-python app.py "Photosynthesis in Plants"
+python app.py "History of Indian Culture"
 ```
 
 Output files will appear in:  
