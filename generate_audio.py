@@ -11,7 +11,11 @@ def generate_audio(script, topic):
         engine.setProperty("voice", voices[1].id)
     # optional: adjust rate for natural tone
     engine.setProperty("rate", 150)
-    engine.save_to_file(script, filename)
-    engine.runAndWait()
+    if script:
+        engine.save_to_file(script, filename)
+        engine.runAndWait()
+    else:
+        print("❌ No script to generate audio from.")
+        return None
     print("✅ Audio generated successfully.")
     return filename

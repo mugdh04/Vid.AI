@@ -65,7 +65,9 @@ def generate_script(topic):
 
     except requests.exceptions.RequestException as e:
         print("❌ Network error:", e)
+        print("Please check your internet connection and the OpenRouter API status.")
     except Exception as e:
         print("❌ Unexpected error:", e)
+        print("Please check your OpenRouter API key and the request parameters.")
 
     return {"narration_script": "", "image_script": ""}
