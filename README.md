@@ -174,11 +174,11 @@ Vid.AI/
 ├── 📝 generate_subtitles.py  # Subtitle generation (optional)
 ├── 🌍 .env                   # Environment variables
 ├── 📋 requirements.txt       # Python dependencies
-├── 📖 README.md             # This file
-├── 📁 output/               # Generated videos
-├── 📁 images/               # Temporary image storage
-├── 📁 videos/               # Temporary video storage
-└── 📁 audio/                # Temporary audio storage
+├── 📖 README.md              # This file
+├── 📁 output/                # Generated videos
+├── 📁 images/                # Temporary image storage
+├── 📁 videos/                # Temporary video storage
+└── 📁 audio/                 # Temporary audio storage
 ```
 
 ---
@@ -373,7 +373,7 @@ We welcome contributions! Here's how you can help:
 ### 📝 Development Setup
 ```bash
 # Clone your fork
-git clone https://github.com/yourusername/vid-ai.git
+git clone https://github.com/yourusername/Vid.AI.git
 
 # Create virtual environment
 python -m venv venv
@@ -427,10 +427,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 💬 Support
 
-- 📧 **Email**: support@vid-ai.com
-- 💬 **Discord**: [Join our community](https://discord.gg/vid-ai)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/vid-ai/issues)
-- 📖 **Docs**: [Full Documentation](https://vid-ai.readthedocs.io)
+- 📧 **Email**: mugdhs2004@gmail.com
+- 🐛 **Issues**: [GitHub Issues](https://github.com/mugdh04/Vid.AI/issues)
 
 ---
 
