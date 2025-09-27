@@ -1,11 +1,17 @@
 import requests
 import re
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
 def generate_script(topic):
     url = "https://openrouter.ai/api/v1/chat/completions"
 
     headers = {
-        "Authorization": "Bearer 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",
+        "Authorization": "Bearer " + OPENROUTER_API_KEY,
         "Content-Type": "application/json"
     }
 
