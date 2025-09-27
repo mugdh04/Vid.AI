@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vid.AI - AI Integrated Video Generator</title>
+    
+    <!-- Favicon links -->
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='images/favicon.svg') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/favicon.svg') }}">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/favicon.svg') }}" alt="Vid.AI Logo" class="nav-logo-img">
+                <span>Vid.AI</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-graphics">
+                <div class="floating-icon"><i class="fas fa-robot"></i></div>
+                <div class="floating-icon"><i class="fas fa-video"></i></div>
+                <div class="floating-icon"><i class="fas fa-magic"></i></div>
+            </div>
+            
+            <h1 class="hero-title">
+                <span class="gradient-text">Vid.AI</span><br>
+                AI Integrated Video Generator
+            </h1>
+            <p class="hero-subtitle">
+                Transform your ideas into stunning videos with the power of artificial intelligence. 
+                Just enter a prompt and watch magic happen!
+            </p>
+            
+            <div class="input-section">
+                <div class="input-container">
+                    <input type="text" id="promptInput" placeholder="Enter your video topic or idea..." maxlength="200">
+                    <button id="generateBtn" class="generate-btn">
+                        <i class="fas fa-play"></i>
+                        Generate Video
+                    </button>
+                </div>
+                <div class="input-info">
+                    <i class="fas fa-info-circle"></i>
+                    Example: "The history of space exploration" or "How photosynthesis works"
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Section -->
+    <section class="progress-section" id="progressSection" style="display: none;">
+        <div class="container">
+            <div class="progress-content">
+                <div class="random-fact" id="randomFact">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Did you know? Loading amazing facts...</span>
+                </div>
+                
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <h3 id="progressTitle">Initializing AI Video Generator...</h3>
+                        <span class="progress-percentage" id="progressPercentage">0%</span>
+                    </div>
+                    
+                    <div class="progress-bar-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-steps">
+                        <div class="step completed" data-step="0">
+                            <div class="step-icon"><i class="fas fa-check"></i></div>
+                            <span>Video Search</span>
+                        </div>
+                        <div class="step completed" data-step="1">
+                            <div class="step-icon"><i class="fas fa-check"></i></div>
+                            <span>Script Generation</span>
+                        </div>
+                        <div class="step completed" data-step="2">
+                            <div class="step-icon"><i class="fas fa-check"></i></div>
+                            <span>Audio Creation</span>
+                        </div>
+                        <div class="step completed" data-step="3">
+                            <div class="step-icon"><i class="fas fa-check"></i></div>
+                            <span>Video Assembly</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section" id="downloadSection" style="display: none;">
+        <div class="container">
+            <div class="download-content">
+                <div class="success-animation">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h2>Video Already Available! 🚀</h2>
+                <p>Found existing video: "Space Exploration" with 100% similarity to your request.</p>
+                
+                <div class="download-buttons">
+                    <button id="downloadBtn" class="download-btn">
+                        <i class="fas fa-download"></i>
+                        Download Video
+                    </button>
+                    <button id="createAnotherBtn" class="secondary-btn">
+                        <i class="fas fa-plus"></i>
+                        Create Another Video
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="features-container">
+            <div class="features-heading">
+                <h2>Why Choose Vid.AI?</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI-Powered</h3>
+                    <p>Advanced artificial intelligence creates engaging scripts and selects perfect visuals automatically.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Lightning Fast</h3>
+                    <p>Generate professional-quality videos in minutes, not hours or days.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Beautiful Design</h3>
+                    <p>Stunning visuals with smooth transitions and professional-grade audio narration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Vid.AI</h2>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="{{ url_for('static', filename='images/robot-thinking.svg') }}" alt="AI Robot">
+                </div>
+                <div class="about-text">
+                    <h3>So... what's the <span class="gradient-text">magic</span> behind Vid.AI?</h3>
+                    <p>Well, it's not <i>actually</i> magic. Just a bunch of algorithms pretending to be smart while frantically generating videos behind the scenes.</p>
+                    <p>Vid.AI combines cutting-edge AI with the desperation of meeting project deadlines to transform your vague ideas into surprisingly coherent videos.</p>
+                    <p>While other video generators are still figuring out what a "video" is, Vid.AI is already asking, "Would you like subtitles with that?"</p>
+                    <div class="about-steps">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-desc">You type something. <i>Anything.</i> We're not picky.</div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-desc">Our AI panics, then calms down and writes a script.</div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-desc">We find pretty pictures that kinda match your topic.</div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-desc">Tada! A video that looks like you spent hours making it.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            
+            <div class="contact-content">
+                <div class="team-members">
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3 class="member-name">Mugdh Kumar Sharma</h3>
+                        <a href="https://github.com/mugdh04" target="_blank" class="github-link">
+                            <i class="fab fa-github"></i> github.com/mugdh04
+                        </a>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3 class="member-name">Twinkle Kaushik</h3>
+                        <a href="https://github.com/twin007" target="_blank" class="github-link">
+                            <i class="fab fa-github"></i> github.com/twin007
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-email">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:teamVidAI@gmail.com">teamVidAI@gmail.com</a>
+                    <p>We promise to read your email... eventually.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Made with <span class="heart"><i class="fas fa-heart"></i></span> by Team Vid.AI</p>
+            <p class="copyright">All Rights Reserved © Copyright 2025</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .primary { fill: #8B5CF6; }
+    .secondary { fill: #A78BFA; }
+    .dark { fill: #5B21B6; }
+    .light { fill: #EDE9FE; }
+    .highlight { fill: #FFFFFF; }
+    .bubble { fill: rgba(139, 92, 246, 0.2); stroke: #8B5CF6; stroke-width: 2; }
+    .question { fill: #8B5CF6; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 1; }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    .robot { animation: float 6s ease-in-out infinite; }
+    .thought { animation: pulse 3s ease-in-out infinite; }
+    .eye { animation: blink 2s infinite; }
+  </style>
+  
+  <!-- Thought bubbles -->
+  <g class="thought">
+    <circle class="bubble" cx="320" cy="80" r="30"/>
+    <circle class="bubble" cx="260" cy="50" r="20"/>
+    <circle class="bubble" cx="210" cy="40" r="15"/>
+    
+    <text class="question" x="320" y="85" text-anchor="middle" font-size="24">?</text>
+    <text class="question" x="260" y="55" text-anchor="middle" font-size="16">?</text>
+  </g>
+  
+  <!-- Robot -->
+  <g class="robot">
+    <!-- Head -->
+    <rect class="primary" x="120" y="120" width="160" height="140" rx="20"/>
+    
+    <!-- Face -->
+    <circle class="light" cx="160" cy="170" r="20"/> <!-- Left eye socket -->
+    <circle class="light" cx="240" cy="170" r="20"/> <!-- Right eye socket -->
+    
+    <circle class="eye" cx="160" cy="170" r="10"/> <!-- Left eye -->
+    <circle class="eye" cx="240" cy="170" r="10"/> <!-- Right eye -->
+    
+    <!-- Mouth -->
+    <rect class="light" x="170" y="210" width="60" height="10" rx="5"/>
+    
+    <!-- Antenna -->
+    <rect class="secondary" x="190" y="90" width="20" height="30"/>
+    <circle class="dark" cx="200" cy="90" r="15"/>
+    
+    <!-- Body -->
+    <rect class="secondary" x="140" y="260" width="120" height="100" rx="10"/>
+    
+    <!-- Details -->
+    <rect class="dark" x="160" y="280" width="80" height="30" rx="5"/>
+    <circle class="light" cx="180" cy="295" r="5"/>
+    <circle class="highlight" cx="220" cy="295" r="5"/>
+  </g>
+</svg>
