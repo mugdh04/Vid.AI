@@ -128,14 +128,14 @@ socket.on('video_found', (data) => {
         const descMsg = downloadSection.querySelector('p');
         const downloadButton = downloadSection.querySelector('#downloadBtn');
         
-        successMsg.textContent = 'Video Already Available! 🚀';
-        descMsg.textContent = `Found existing video: "${data.original_topic}" with ${Math.round(data.similarity * 100)}% similarity to your request.`;
-        downloadButton.innerHTML = '<i class="fas fa-download"></i> Download Again';
+        successMsg.textContent = 'Video Available! 🚀';
+        descMsg.textContent = `Found video: "${data.original_topic}" with ${Math.round(data.similarity * 100)}% similarity to your request.`;
+        downloadButton.innerHTML = '<i class="fas fa-download"></i> Download Video';
     }, 1000);
     
     // Re-enable generate button
     generateBtn.disabled = false;
-    generateBtn.innerHTML = '<i class="fas fa-play"></i> Generate Video';
+    generateBtn.innerHTML = '<i class="fas fa-play"></i> Generate Another Video';
 });
 
 socket.on('video_complete', (data) => {

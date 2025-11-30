@@ -18,7 +18,7 @@ def generate_script(topic):
     user_prompt = (
         f"Generate an educational narration script on topic '{topic}' for the length of ideal 5 to 10 mins as per the requirement of the topic.\n"
         "Divide the script into two parts: 1st Narration Script and 2nd Visual Cues for Video Generation.\n"
-        "Narration Script should be 5 to 10 mins in length and it should not contain any kind of Tags or anything ese then the narration script itself, do not write anything else and strictly follow this not even the word Narrator or Narration script in the starting."
+        "Narration Script should be 5 to 10 mins in length and it should not contain any kind of Tags or anything ese then the narration script itself, do not write anything else and strictly follow this not even the word Narrator or Narration script in the starting and do not include the word Visual Cue anywhere in the output."
         "Keep it informative and engaging. Make it detailed and easy to understand."
         "Make it engaging and informative, suitable for a general audience and everyone should be able to understand it easily."
         "Include real-life examples where ever needed to explain complex concepts to help students.\n\n"
